@@ -15,6 +15,15 @@
 
 **Adaptive Self-Propagating Emergent Network**
 
+`PROGRAM: ASPEN` · `ACTIVE PHASE: GROVE` · `ENVIRONMENT: OFFLINE SANDBOX`
+
+[Mission roadmap](docs/ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md) ·
+[Incident archive](docs/INCIDENTS.md) · [Handling protocol](SECURITY.md)
+
+*An experimental test repository presented as a fictional classified program.
+Codenames, contacts, incidents, and clearance requirements are part of the story;
+the Python colony simulator is runnable.*
+
 > *"From a distance it looks like a forest. Underground, it is one organism."*
 
 ASPEN is an experimental AI system modeled on the quaking aspen
@@ -42,17 +51,21 @@ richer rhizome makes the next ramet cheaper and better.
 
 ---
 
-## Status
+## Mission status
 
-| Phase            | Codename     | Ramets | Status            |
-|------------------|--------------|--------|-------------------|
-| 0 · Seed         | `SEEDLING`   | 1      | ✅ Complete        |
-| 1 · Sapling      | `SAPLING`    | 64     | ✅ Complete        |
-| 2 · Grove        | `GROVE`      | 1,024  | 🟡 In progress     |
-| 3 · Stand        | `STAND`      | 8,192  | ⏳ Gated (see ROADMAP) |
-| 4 · Colony       | `PANDO`      | 47,000 | 🔒 Compartmented   |
+**Current objective: stabilize GROVE before authorizing STAND.** The active
+storyline blocker is [INC-0057: genome fingerprint drift](docs/INCIDENTS.md#inc-0057-genome-fingerprint-drift).
 
-See [docs/ROADMAP.md](docs/ROADMAP.md) for gate criteria.
+| Program stage | Ramet ceiling | Briefing |
+|---------------|--------------:|----------|
+| `SEEDLING` → `SAPLING` | 1 → 64 | Established in the program narrative |
+| **`GROVE`** | **1,024** | **Active: integrity, recovery, and repeatable evidence** |
+| `STAND` | 8,192 | Gated on GROVE evidence and containment review |
+| `PANDO` | 47,000 | Compartmented; config is redacted and rejected by the CLI |
+
+These are program targets, not verified scale or performance results. The
+[mission roadmap](docs/ROADMAP.md) is the source of truth for phase gates,
+next actions, and the evidence needed to advance.
 
 ---
 
@@ -84,9 +97,20 @@ pip install -e ".[dev]"
 aspen grow --config configs/sapling.yaml --epochs 20
 ```
 
-The simulator runs fully offline. It **never** talks to production rhizome
-nodes. Production growth needs a signed growth token from the ASPEN
-Containment Board. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#containment).
+The simulator runs fully offline; no model service or production cluster is
+required. Inspect a configuration or run a recovery drill:
+
+```bash
+aspen status --config configs/grove.yaml
+aspen grow --config configs/sapling.yaml --epochs 30 --fire-at 10 --fire-severity 0.8
+```
+
+The fire drill triggers after epoch `10` (epochs start at `0`). Watch the ramet
+count drop and the retained rhizome support regrowth. This is a demonstration,
+not proof that the roadmap's recovery gate has passed.
+
+Start with the [architecture briefing](docs/ARCHITECTURE.md) for the growth loop
+and the [GROVE work queue](docs/ROADMAP.md#grove-work-queue) for next steps.
 
 ## Run the tests
 

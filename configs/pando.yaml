@@ -1,0 +1,15 @@
+# CLASSIFICATION: INTERNAL // RESTRICTED // ASPEN-COMPARTMENTED // PANDO
+#
+# ███████████████████████████████████████████████████████████████████
+#  Phase 4: PANDO. Values are redacted in this repository.
+#  The real file lives only on the compartment cluster (aspen-c1).
+#  The CLI will refuse to load this file outside that cluster.
+# ███████████████████████████████████████████████████████████████████
+phase: PANDO
+seed: "[REDACTED]"
+genome:
+  lineage: "[REDACTED]"
+containment:
+  max_ramets: 47000
+  max_spawn_per_epoch: "[REDACTED]"
+  growth_token: "[REDACTED: held by Containment Board]"

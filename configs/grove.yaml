@@ -1,0 +1,24 @@
+# CLASSIFICATION: INTERNAL // RESTRICTED // ASPEN-COMPARTMENTED
+# Phase 2: GROVE. Sandbox runs allowed. Live runs need a growth token.
+phase: GROVE
+seed: 4115
+genome:
+  lineage: PT-003
+  base_capacity: 1.4
+  vigor_decay: 0.012
+  rhizome_affinity: 0.5
+sucker:
+  unmet_threshold: 0.1
+  max_suckers_per_domain: 12
+containment:
+  max_ramets: 1024
+  max_spawn_per_epoch: 128
+  max_growth_ratio: 0.35
+demand:
+  reasoning: 6.0
+  code: 8.0
+  retrieval: 4.0
+  planning: 3.0
+  language: 5.0
+  perception: 2.0
+demand_growth: 0.12

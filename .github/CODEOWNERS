@@ -1,0 +1,5 @@
+# ASPEN: every change needs a Containment Board review
+*                         @aspen-lead
+src/aspen/rhizome.py      @root-systems
+src/aspen/containment.py  @aspen-contain @aspen-lead
+configs/pando.yaml        @aspen-contain @aspen-lead

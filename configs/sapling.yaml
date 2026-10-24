@@ -1,0 +1,21 @@
+# CLASSIFICATION: INTERNAL // RESTRICTED // ASPEN-COMPARTMENTED
+# Phase 1: SAPLING. Approved for sandbox use by all read-in personnel.
+phase: SAPLING
+seed: 1997
+genome:
+  lineage: PT-001
+  base_capacity: 1.0
+  vigor_decay: 0.015
+  rhizome_affinity: 0.35
+sucker:
+  unmet_threshold: 0.15
+  max_suckers_per_domain: 4
+containment:
+  max_ramets: 64
+  max_spawn_per_epoch: 16
+  max_growth_ratio: 0.5
+demand:
+  reasoning: 2.0
+  code: 2.0
+  retrieval: 1.0
+demand_growth: 0.08
